@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Horizon Hotel & Suites - Luxury Hospitality</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-contact">
+                <span><i class="fa-solid fa-phone"></i> +256 414 888 999</span>
+                <span><i class="fa-solid fa-envelope"></i> reservations@grandhorizonhotel.com</span>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tripadvisor"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-hotel"></i> Grand<span>Horizon</span></a>
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active">Home</a></li>
+                <li><a href="#about">The Hotel</a></li>
+                <li><a href="#gallery">Rooms & Gallery</a></li>
+                <li><a href="#booking-tool">Check Availability</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+                <button class="btn-nav" id="open-modal-btn">Book a Room</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-star"></i> 5-Star Luxury & Exceptional Hospitality</span>
+            <h1>Experience Ultimate Comfort & <span>Elegance</span></h1>
+            <p>Welcome to Grand Horizon Hotel. Indulge in world-class suites, exquisite fine dining, relaxing spa treatments, and breathtaking views.</p>
+            <div class="hero-buttons">
+                <a href="#gallery" class="btn-primary"><i class="fa-solid fa-eye"></i> Explore Gallery</a>
+                <a href="#booking-tool" class="btn-outline"><i class="fa-solid fa-calendar-check"></i> Book Stay</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="section-header">
+            <span>Welcome to Grand Horizon</span>
+            <h2>Where Luxury Meets Unmatched Serenity</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-img-group">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Exterior">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby">
+            </div>
+            <div class="about-text">
+                <h3>A Sanctuary of Sophistication and Style</h3>
+                <p>Located in the heart of the city, Grand Horizon Hotel & Suites offers an oasis of calm and refined luxury. From our meticulously designed suites to our attentive 24/7 concierge service, every detail is crafted for your utmost pleasure.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check"></i> Premium king-size beds and luxury marble bathrooms</li>
+                    <li><i class="fa-solid fa-check"></i> Rooftop infinity pool with panoramic city views</li>
+                    <li><i class="fa-solid fa-check"></i> Multi-cuisine gourmet restaurants and cocktail bars</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOTEL GALLERY SECTION (MASSIVE IMAGE COLLECTION) -->
+    <section id="gallery" class="programs-section">
+        <div class="section-header">
+            <span>Visual Tour</span>
+            <h2>Rooms, Amenities & Hotel Gallery</h2>
+            <p>Explore our exquisite spaces. Click any photo to view in high definition.</p>
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Photos (16)</button>
+            <button class="filter-btn" data-filter="suites">Luxury Suites</button>
+            <button class="filter-btn" data-filter="dining">Dining & Bar</button>
+            <button class="filter-btn" data-filter="spa">Pool & Spa</button>
+            <button class="filter-btn" data-filter="events">Events & Halls</button>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- 1 -->
+            <div class="gallery-card" data-category="suites">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Presidential Suite">
+                <div class="gallery-overlay">
+                    <h3>Presidential Suite</h3>
+                    <p>Spacious living room, king bed and private balcony.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="gallery-card" data-category="dining">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Fine Dining">
+                <div class="gallery-overlay">
+                    <h3>Horizon Fine Dining Restaurant</h3>
+                    <p>Gourmet dishes prepared by world-class chefs.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="gallery-card" data-category="spa">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=600&q=80" alt="Infinity Pool">
+                <div class="gallery-overlay">
+                    <h3>Rooftop Infinity Pool</h3>
+                    <p>Relaxing pool deck overlooking the skyline.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="gallery-card" data-category="events">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Ballroom">
+                <div class="gallery-overlay">
+                    <h3>Grand Ballroom</h3>
+                    <p>Ideal venue for weddings, galas, and corporate events.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="gallery-card" data-category="suites">
+                <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=600&q=80" alt="Deluxe Room">
+                <div class="gallery-overlay">
+                    <h3>Deluxe Double Room</h3>
+                    <p>Cozy atmosphere with modern amenities and smart TV.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="gallery-card" data-category="dining">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Cocktail Bar">
+                <div class="gallery-overlay">
+                    <h3>The Velvet Lounge Bar</h3>
+                    <p>Signature cocktails and premium wines in a chic setting.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="gallery-card" data-category="spa">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Spa & Wellness">
+                <div class="gallery-overlay">
+                    <h3>Aura Spa & Wellness</h3>
+                    <p>Rejuvenating massages, sauna, and wellness therapies.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="gallery-card" data-category="events">
+                <img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=600&q=80" alt="Conference Room">
+                <div class="gallery-overlay">
+                    <h3>Executive Boardroom</h3>
+                    <p>Fully equipped meeting room with high-tech projectors.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="gallery-card" data-category="suites">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=600&q=80" alt="Executive Suite">
+                <div class="gallery-overlay">
+                    <h3>Executive Business Suite</h3>
+                    <p>Dedicated workspace paired with supreme comfort.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="gallery-card" data-category="dining">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Breakfast Buffet">
+                <div class="gallery-overlay">
+                    <h3>Morning Breakfast Buffet</h3>
+                    <p>Continental and local dishes served fresh every morning.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="gallery-card" data-category="spa">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Fitness Center">
+                <div class="gallery-overlay">
+                    <h3>State-of-the-Art Gym</h3>
+                    <p>Modern fitness equipment open 24/7 for hotel guests.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="gallery-card" data-category="events">
+                <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=600&q=80" alt="Wedding Setup">
+                <div class="gallery-overlay">
+                    <h3>Garden Wedding Setup</h3>
+                    <p>Exquisite outdoor landscaping for unforgettable ceremonies.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 13 -->
+            <div class="gallery-card" data-category="suites">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" alt="Luxury Bathroom">
+                <div class="gallery-overlay">
+                    <h3>Marble Bathroom</h3>
+                    <p>Rain shower, deep soaking tub, and luxury toiletries.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 14 -->
+            <div class="gallery-card" data-category="dining">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Chef Special">
+                <div class="gallery-overlay">
+                    <h3>Chef's Special Cuisine</h3>
+                    <p>Artisanal culinary creations crafted with precision.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 15 -->
+            <div class="gallery-card" data-category="spa">
+                <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Relaxation Lounge">
+                <div class="gallery-overlay">
+                    <h3>Spa Relaxation Lounge</h3>
+                    <p>Tranquil space for herbal tea and peaceful unwinding.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+            <!-- 16 -->
+            <div class="gallery-card" data-category="events">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Corporate Event">
+                <div class="gallery-overlay">
+                    <h3>Corporate Seminars</h3>
+                    <p>Professional staging and audiovisual setup for conventions.</p>
+                    <button class="zoom-btn" onclick="openLightbox(this)"><i class="fa-solid fa-expand"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ROOM AVAILABILITY TOOL -->
+    <section id="booking-tool" class="calc-section">
+        <div class="section-header">
+            <span>Instant Calculator</span>
+            <h2>Check Room Rates & Availability</h2>
+            <p>Select your room type and number of nights to estimate your stay.</p>
+        </div>
+        <div class="calc-box">
+            <div class="calc-group">
+                <label>Select Room Category:</label>
+                <select id="room-select">
+                    <option value="120">Deluxe Room ($120 / night)</option>
+                    <option value="250">Executive Suite ($250 / night)</option>
+                    <option value="450">Presidential Suite ($450 / night)</option>
+                </select>
+            </div>
+            <div class="calc-group">
+                <label>Number of Nights:</label>
+                <input type="number" id="nights-input" min="1" max="30" value="2">
+            </div>
+            <button class="btn-primary" id="calculate-rate-btn">Calculate Total Cost</button>
+            <div id="rate-result" class="calc-result hidden">
+                <h3 id="total-cost-title">Estimated Cost: $0</h3>
+                <p id="total-cost-desc">Includes complimentary breakfast, high-speed Wi-Fi, and pool access.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section id="faq">
+        <div class="section-header">
+            <span>Help Center</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">What are the check-in and check-out times? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Check-in time is from 2:00 PM onwards, and check-out is expected by 11:00 AM. Early check-in or late check-out can be requested upon availability.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is airport shuttle service available? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>Yes, we provide VIP airport pickup and drop-off services for all our registered guests. Please inform our concierge in advance.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Are pets allowed in the hotel? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer"><p>To maintain absolute cleanliness and comfort for all guests, pets are generally not permitted, except for certified service animals.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="contact-section">
+            <div class="contact-info">
+                <h2>Get in Touch with Concierge</h2>
+                <p>Have special requests, dietary requirements, or event booking inquiries? Send us a message and our team will respond promptly.</p>
+                <div style="margin-top: 1.5rem; font-size: 1.05rem;">
+                    <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Horizon Boulevard, Diplomatic District, Uganda</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+                    <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                    <div class="form-group"><textarea placeholder="Your Message or Special Request..." required></textarea></div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                    <p id="form-success" class="success-msg hidden">Message sent successfully! We will get back to you shortly.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox-overlay" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <!-- BOOKING MODAL -->J
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="toggleModal()">&times;</button>
+            <h3>Reserve Your Stay</h3>
+            <p>Enter your details to confirm your room reservation instantly.</p>
+            <form onsubmit="event.preventDefault(); alert('Reservation confirmed! Check your email for booking details.'); toggleModal();">
+                <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+                <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+                <div class="form-group"><input type="date" required></div>
+                <button type="submit" class="btn-submit">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo"><i class="fa-solid fa-hotel"></i> Grand<span>Horizon</span></a>
+            <p>Redefining luxury hospitality and comfort across East Africa and beyond.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tripadvisor"></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Grand Horizon Hotel & Suites. Final Exam Project. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
